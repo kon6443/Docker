@@ -4,14 +4,11 @@ services:
     restart: always
     build: .
     ports:
-      - 8080:8080
+      - 8080:8080 
   mongo:
     image: mongo
     ports:
-      - 8080:8080
-   # - 27017:27017
-   # volumes:
-   #   - mongodb:/data/db
-#volumes:
-# mongodb:
+      - 27017:27017
+    env_file: 
+      - .env
 

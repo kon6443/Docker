@@ -6,6 +6,7 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') }); 
 
 exports.db = () => {
+    console.log('db connecting...');
     mongoose.connect(
         process.env.MONGO_URI,
         {
